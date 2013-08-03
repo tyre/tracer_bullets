@@ -27,7 +27,7 @@ module TracerBullets
     extend ActiveSupport::Concern
 
     included do
-      before_filter :setup_tracer_bullet_start_time
+      prepend_before_filter :setup_tracer_bullet_start_time
     end
 
     module InstanceMethods
